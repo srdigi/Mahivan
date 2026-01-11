@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-<!-- META PIXEL (SAFE – NO VALUE/CURRENCY) -->
+<!-- META PIXEL (SAFE – NO VALUE / CURRENCY) -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -64,7 +64,7 @@ font-size:15px;
 color:#ddd;
 }
 
-/* STATIC COUNTER (NO FAST ANIMATION) */
+/* Countdown */
 .counter{
 margin:20px auto;
 font-size:56px;
@@ -97,7 +97,7 @@ box-shadow:0 0 20px rgba(44,255,44,0.4);
 margin:25px 0;
 }
 
-/* Timer text (STATIC) */
+/* Timer text */
 .timer-text{
 margin-top:10px;
 font-size:15px;
@@ -105,9 +105,16 @@ color:#ccc;
 }
 
 .accuracy{
-margin-top:20px;
-font-size:22px;
+margin-top:18px;
+font-size:20px;
 font-weight:800;
+}
+
+/* Footer */
+.footer{
+margin-top:22px;
+font-size:12px;
+opacity:0.7;
 }
 </style>
 </head>
@@ -119,8 +126,8 @@ font-weight:800;
 <div class="title">MAHIVAAN 🏏⚽️</div>
 <div class="subtitle">Trusted Sports Prediction Community</div>
 
-<!-- STATIC NUMBER (NO FAST JS) -->
-<div class="counter">FREE JOINING</div>
+<!-- 45 SECOND SAFE COUNTDOWN -->
+<div class="counter" id="count">45</div>
 
 <div class="stats">
 <p>✅ Experienced Sports Analyst</p>
@@ -129,7 +136,7 @@ font-weight:800;
 <p>📊 Pre-Match Analysis</p>
 </div>
 
-<!-- SAFE BUTTON CLICK EVENT -->
+<!-- SAFE BUTTON -->
 <div class="join-btn">
 <a href="https://t.me/+VMIRSY8p5YpmMWM1"
    target="_blank"
@@ -140,14 +147,31 @@ SUBSCRIBE MAHIVAAN TELEGRAM
 </div>
 
 <div class="timer-text">
-FREE JOINING AVAILABLE
+FREE JOINING ENDS IN <span id="timer" style="color:#2cff2c;font-weight:bold;">45</span> SECONDS
 </div>
 
 <div class="accuracy">
 High Accuracy Insights (Entertainment Purpose)
 </div>
 
+<!-- FOOTER CREDIT -->
+<div class="footer">
+ADS managed by @ShouryaGupta11
 </div>
+
+</div>
+
+<!-- SAFE 45 SECOND TIMER SCRIPT -->
+<script>
+let t = 45;
+setInterval(()=>{
+ if(t > 0){
+   t--;
+   document.getElementById("count").innerHTML = t;
+   document.getElementById("timer").innerHTML = t;
+ }
+},1000);
+</script>
 
 </body>
 </html>
